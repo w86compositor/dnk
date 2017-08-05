@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dnk Memes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dnk_memes.each do |dnk_meme| %>
+      <tr>
+        <td><%= dnk_meme.description %></td>
+        <td><%= link_to 'Show', dnk_meme %></td>
+        <td><%= link_to 'Edit', edit_dnk_meme_path(dnk_meme) %></td>
+        <td><%= link_to 'Destroy', dnk_meme, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dnk Meme', new_dnk_meme_path %>
