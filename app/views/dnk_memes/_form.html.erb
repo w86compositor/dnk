@@ -1,0 +1,22 @@
+<%= form_with(model: dnk_meme, local: true) do |form| %>
+  <% if dnk_meme.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dnk_meme.errors.count, "error") %> prohibited this dnk_meme from being saved:</h2>
+
+      <ul>
+      <% dnk_meme.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :dnk_meme_description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

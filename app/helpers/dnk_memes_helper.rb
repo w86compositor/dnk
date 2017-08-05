@@ -1,0 +1,2 @@
+module DnkMemesHelper
+end

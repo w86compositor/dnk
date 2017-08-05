@@ -1,0 +1,2 @@
+class DnkMeme < ApplicationRecord
+end
